@@ -3,9 +3,9 @@ const cors=require('cors');
 const bodyParser=require('body-parser');
 const Route = express.Router();
 
-const accountSid = "AC85af0c9055e7cdc712b42bac120dbb62";
-const authToken = "bc92b71c28a2343fc987de8e56acbfbb";
-const serviceId = "VA77c179f41f8f8b822376bd2d3a50c8ff";
+const accountSid = process.env.ACCOUNTSID;
+const authToken = process.env.AUTHTOKEN;
+const serviceId = process.env.SERVICEID;
 const client = require('twilio')(accountSid, authToken);
 
 const PORT = process.env.PORT || 5000 ;
